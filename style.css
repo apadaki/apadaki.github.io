@@ -1,7 +1,7 @@
 html {
     margin-top: 2%;
-    margin-left: 14%;
-    margin-right: 14%;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-bottom: 5%;
     zoom:100%;
     background-color: #edf0f4;
@@ -12,6 +12,7 @@ strong {
 article {
     font: 400 18px/1.5 "Hind Siliguri",Roboto,Helvetica,Arial,sans-serif;
     color: #111;
+    word-spacing: 0.5px;
 }
 h1 {
     font-size: 36px;
