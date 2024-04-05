@@ -1,0 +1,74 @@
+html {
+    margin-top: 3%;
+    margin-left: 16%;
+    margin-right: 16%;
+    margin-bottom: 5%;
+    zoom:100%;
+    background-color: #edf0f4;
+}
+strong {
+    font-weight: 600;
+}
+article {
+    font: 400 18px/1.5 "Hind Siliguri",Roboto,Helvetica,Arial,sans-serif;
+    color: #111;
+}
+h1 {
+    font-size: 36px;
+    color: #011F5B;
+}
+
+h1,h2,h3,h4 {
+    font-weight: 500;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column
+}
+
+a.pub {
+    color: #d43515;
+    text-decoration: none;
+
+}
+
+a.pub:hover {
+    color: #990000;
+    text-decoration: underline;
+}
+
+
+a {
+    color: #0c5fac;
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: #003699;
+    text-decoration: underline;
+}
+
+span.email {
+    font: 400 18px/1.5 "Reddit Mono", monospace;
+    color: #000000;
+    background-color: #002aff18;
+    padding: 5px;
+    border-radius: 5px;
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+span.empty {
+    color: #090835;
+    display: none;
+}
