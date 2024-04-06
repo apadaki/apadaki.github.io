@@ -59,7 +59,7 @@ a:hover {
 }
 
 span.email {
-    font: 400 18px/1.5 "Reddit Mono", monospace;
+    font: 400 1.25vw/1.5 "Reddit Mono", monospace;
     color: #000000;
     background-color: #002aff18;
     padding: 5px;
