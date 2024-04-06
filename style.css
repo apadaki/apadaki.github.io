@@ -17,6 +17,7 @@ article {
 h1 {
     font-size: 36px;
     color: #011F5B;
+    margin-bottom: 1%;
 }
 
 h1,h2,h3,h4 {
@@ -38,7 +39,6 @@ body {
 a.pub {
     color: #d43515;
     text-decoration: none;
-
 }
 
 a.pub:hover {
@@ -70,6 +70,5 @@ span.email {
 }
 
 span.empty {
-    color: #090835;
     display: none;
 }
