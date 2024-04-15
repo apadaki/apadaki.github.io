@@ -8,14 +8,53 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Reddit+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="style.css", rel="stylesheet">
     </head>
 <article>
 
+<script>
+    function stringToHex(str) {
+        let hex = '';
+        for (let i = 0; i < str.length; i++) {
+            hex += str.charCodeAt(i).toString(16);
+        }
+        return hex;
+    }
+    function hexToString(hex) {
+        let str = '';
+        for (let i = 0; i < hex.length; i += 2) {
+            str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+        }
+        return str;
+    }
+</script>
+
 <body>
     <center><h1>Ashwin Padaki</h1>
-    <span class="email"><strong></strong> ash<span class="empty" aria-hidden="true">notarealemail@gmail.fake</span>win.pad<span class="empty" aria-hidden="true">notarealemail@yahoo.fake</span>aki<span class="empty" aria-hidden="true">notarealemail@proton.fake</span>@colum<span class="empty" aria-hidden="true">notarealemail@outlook.fake</span>bia<span class="empty" aria-hidden="true">notarealemail@netscape.fake</span>.<span class="empty" aria-hidden="true">notarealemail@hubspot.fake</span>edu</span>
+        <a class="email" id="email" onclick="copyEmail()" title="click to copy">
+        <i class="fa fa-clipboard" style="font-size:15px"></i>
+        </a>
     </center>
+
+
+    <script>
+        email_chars = hexToString('61736877696e2e706164616b6940636f6c756d6269612e656475').split('')
+        var email_tag = document.getElementById('email')
+        console.log(email_chars)
+        for (var i=0; i<email_chars.length; i++) {
+            var sep = document.createElement('span')
+            sep.innerText = email_chars[i]
+            email_tag.appendChild(sep)
+        }
+    </script>
+    
+    <script>
+        function copyEmail() {
+        navigator.clipboard.writeText(hexToString('61736877696e2e706164616b6940636f6c756d6269612e656475'));
+        }
+    </script>
+    
 
 
     <p>I am a senior at <a href="https://columbia.edu/">Columbia University</a> majoring in Computer Science and Mathematics. I'm broadly interested in theoretical computer science, particularly algorithms in online, stochastic, streaming and resource-constrained settings. In Summer 2023, I participated in the <a href="http://dimacs.rutgers.edu/">DIMACS REU</a>, in which I studied the hardness of approximation of the <a href="https://arxiv.org/abs/2312.02097">diameter clustering problem</a>.</p>

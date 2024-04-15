@@ -17,7 +17,7 @@ article {
 h1 {
     font-size: 36px;
     color: #011F5B;
-    margin-bottom: 1%;
+    margin-bottom: 0.5%;
 }
 
 h1,h2,h3,h4 {
@@ -50,7 +50,6 @@ a.pub:hover {
 a {
     color: #0c5fac;
     text-decoration: none;
-
 }
 
 a:hover {
@@ -58,17 +57,23 @@ a:hover {
     text-decoration: underline;
 }
 
-span.email {
-    font: 400 16px "Reddit Mono", monospace;
-    color: #000000;
-    background-color: #002aff18;
+a.email {
+    border: none;
+    font: 400 15px "Reddit Mono", monospace;
+    color: hsl(0, 0%, 0%);
+    background-color: #025fff2a;
     padding: 6px;
     border-radius: 6px;
-    pointer-events: none;
+    margin-bottom: 1px;
+    /* pointer-events: none; */
     user-select: none;
     -moz-user-select: none;
 }
+a.email:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
 
-span.empty {
-    display: none;
+a.email:active {
+    background-color: #0245ff3c;
 }
