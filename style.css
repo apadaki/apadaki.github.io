@@ -1,7 +1,7 @@
 html {
     margin-top: 2%;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 14%;
+    margin-right: 14%;
     margin-bottom: 5%;
     zoom:100%;
     background-color: #edf0f4;
@@ -59,11 +59,11 @@ a:hover {
 
 a.email {
     border: none;
-    font: 400 15px "Reddit Mono", monospace;
+    font: 400 14px "Reddit Mono", monospace;
     color: hsl(0, 0%, 0%);
     background-color: #025fff2a;
-    padding: 6px;
-    border-radius: 6px;
+    padding: 5px;
+    border-radius: 5px;
     margin-bottom: 1px;
     /* pointer-events: none; */
     user-select: none;
@@ -76,4 +76,8 @@ a.email:hover {
 
 a.email:active {
     background-color: #0245ff3c;
+}
+
+#id2 {
+    display: none;
 }

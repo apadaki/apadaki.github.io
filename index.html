@@ -44,8 +44,15 @@
         console.log(email_chars)
         for (var i=0; i<email_chars.length; i++) {
             var sep = document.createElement('span')
+            sep.id='id1'
             sep.innerText = email_chars[i]
             email_tag.appendChild(sep)
+            if (Math.random() < 0.7) {
+                var fake = document.createElement('span')
+                fake.id = 'id2'
+                fake.innerText = String.fromCharCode(97+Math.floor(26*Math.random()))
+                email_tag.appendChild(fake)
+            }
         }
     </script>
     
