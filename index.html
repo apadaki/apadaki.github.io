@@ -10,6 +10,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Reddit+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="style.css", rel="stylesheet">
+        <i class="fa fa-clipboard" style="font-size:0px"></i>
+
     </head>
 <article>
 
@@ -30,17 +32,21 @@
     }
 </script>
 
+
 <body>
     <center><h1>Ashwin Padaki</h1>
-        <a class="email" id="email" onclick="copyEmail()" title="click to copy">
+        <span class="email" onclick="copyEmail()" onmouseover="show_copy()" onmouseout="show_email()">
+        <span id="emailText"></span>
+        <span id="copyText"> 
         <i class="fa fa-clipboard" style="font-size:15px"></i>
-        </a>
+        (click to copy email) </span>
+        </span>
     </center>
 
 
     <script>
         email_chars = hexToString('61736877696e2e706164616b6940636f6c756d6269612e656475').split('')
-        var email_tag = document.getElementById('email')
+        var email_tag = document.getElementById('emailText')
         console.log(email_chars)
         for (var i=0; i<email_chars.length; i++) {
             var sep = document.createElement('span')
@@ -53,6 +59,20 @@
                 fake.innerText = String.fromCharCode(97+Math.floor(26*Math.random()))
                 email_tag.appendChild(fake)
             }
+        }
+
+        function show_email() {
+            var emailText = document.getElementById('emailText')
+            var copyText = document.getElementById('copyText')
+            copyText.style.display='none'
+            emailText.style.display='initial'
+        }
+
+        function show_copy() {
+            var emailText = document.getElementById('emailText')
+            var copyText = document.getElementById('copyText')
+            copyText.style.display='initial'
+            emailText.style.display='none'
         }
     </script>
     

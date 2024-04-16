@@ -57,25 +57,31 @@ a:hover {
     text-decoration: underline;
 }
 
-a.email {
-    border: none;
+span.email {
+    border: solid black 1px;
     font: 400 14px "Reddit Mono", monospace;
     color: hsl(0, 0%, 0%);
     background-color: #025fff2a;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 6px;
+    border-radius: 6px;
     margin-bottom: 1px;
     /* pointer-events: none; */
     user-select: none;
     -moz-user-select: none;
+    -webkit-user-select: none;
 }
-a.email:hover {
+span.email:hover {
     cursor: pointer;
     text-decoration: none;
 }
 
-a.email:active {
+span.email:active {
     background-color: #0245ff3c;
+}
+
+#copyText {
+    display: none;
+    color:rgb(13, 26, 86)
 }
 
 #id2 {
