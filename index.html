@@ -34,18 +34,22 @@
 
 
 <body>
-    <center><h1>Ashwin Padaki</h1>
+    <center>
+        
+        <h1>Ashwin Padaki</h1>
+
         <span class="email" onclick="copyEmail()" onmouseover="show_copy()" onmouseout="show_email()">
         <span id="emailText"></span>
         <span id="copyText"> 
         <i class="fa fa-clipboard" style="font-size:15px"></i>
         (click to copy email) </span>
         </span>
+
     </center>
 
 
     <script>
-        email_chars = hexToString('61736877696e2e706164616b6940636f6c756d6269612e656475').split('')
+        email_chars = hexToString('61706164616b6940736561732e7570656e6e2e656475').split('')
         var email_tag = document.getElementById('emailText')
         console.log(email_chars)
         for (var i=0; i<email_chars.length; i++) {
@@ -78,34 +82,36 @@
     
     <script>
         function copyEmail() {
-        navigator.clipboard.writeText(hexToString('61736877696e2e706164616b6940636f6c756d6269612e656475'));
+        navigator.clipboard.writeText(hexToString('61706164616b6940736561732e7570656e6e2e656475'));
         }
     </script>
     
 
+    <img src="./profile.JPG" width="200" align="right">
 
-    <p>I am a senior at <a href="https://columbia.edu/">Columbia University</a> majoring in Computer Science and Mathematics. I'm broadly interested in theoretical computer science, particularly algorithms in online, stochastic, streaming and resource-constrained settings. In Summer 2023, I participated in the <a href="http://dimacs.rutgers.edu/">DIMACS REU</a>, in which I studied the hardness of approximation of the <a href="https://arxiv.org/abs/2312.02097">diameter clustering problem</a>.</p>
+    <p>I am a first-year PhD student in the Computer and Information Sciences department at the <a target="_blank" rel="noopener noreferrer" href="https://theory.cis.upenn.edu/people/">University of Pennsylvania</a>, where I am fortunate to be advised by <a target="_blank" rel="noopener noreferrer" href="https://www.cis.upenn.edu/~sanjeev/">Sanjeev Khanna</a> and <a target="_blank" rel="noopener noreferrer" href="https://sites.google.com/site/erikwaing">Erik Waingarten</a>. I am interested in designing algorithms for problems in graph theory and geometry, particularly in modern computational settings.</p>
+        
+    I graduated from <a target="_blank" rel="noopener noreferrer" href="https://columbia.edu/">Columbia University</a>, majoring in Computer Science and Mathematics. In Summer 2023, I participated in the <a target="_blank" rel="noopener noreferrer"href="http://dimacs.rutgers.edu/">DIMACS REU</a>, in which I studied the hardness of approximation of <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2312.02097">diameter clustering</a>. As an undergraduate, I was extremely lucky to have wonderful mentors in Josh Alman, Karthik C. S., and Rocco Servedio.</p>
 
-    <p>I previously interned as a quantitative trader at <a href="https://optiver.com/">Optiver</a>, an options market making firm. In my free time, I play soccer and table tennis, and I enjoy watching most sports. I've recently gotten more into hiking and I'm trying to get better at composing minimalist piano music.    
-    </p>
+    <p>I am supported by an <a target="_blank" rel="noopener noreferrer" href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>.</p>
 
-    <hr/>
-
+    <hr class="thick"/>
+    
     <h2>Research</a></h2>
     <ul>
         <li><strong>Inapproximability of Maximum Diameter Clustering for Few Clusters</strong><br />
         with Karthik C. S., Henry Fleischmann, Kyrylo Karlov, Styopa Zharkov<br/>
-        [<a class="pub" href="https://arxiv.org/abs/2312.02097">arXiv</a>] <i>In Submission</i></li>
+        [<a class="arxiv" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2312.02097">arXiv</a>] <i>In Submission</i></li>
         <li><strong>Smaller Low-Depth Circuits for Kronecker Powers</strong><br/>
         with Josh Alman, Yunfeng Guan<br/>
-        [<a class="pub" href="https://arxiv.org/abs/2211.05217">arXiv</a>] <i>SODA 2023</i></li>
+        [<a class="arxiv" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2211.05217">arXiv</a>] <a class="journal" target="_blank" rel="noopener noreferrer" href="https://epubs.siam.org/doi/10.1137/1.9781611977554.ch160">SODA 2023</a></li>
     </ul>
 
     <hr/>
 
     <h2> Teaching </h2>
 
-    I have been a teaching assistant for the following classes at Columbia:
+    I was a teaching assistant for the following classes at Columbia:
     <ul>
         <li> <div style="display: flex; justify-content: space-between;"> 
             <div>COMS W4261 – <strong>Cryptography</strong> </div>
@@ -121,8 +127,15 @@
         </li>
     </ul>
 
-    In Fall 2023, I co-mentored a lecture series in <a href="https://arxiv.org/abs/2105.10386">Boolean function analysis</a> as part of the <a href="https://columbia-ugtcs.github.io/fall2023.html">Columbia Undergraduate Learning Seminar in TCS</a>.
+    In Fall 2023, I co-mentored a lecture series in <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2105.10386">Boolean function analysis</a> as part of the <a target="_blank" rel="noopener noreferrer" href="https://columbia-ugtcs.github.io/fall2023.html">Columbia Undergraduate Learning Seminar in TCS</a>.
 
+    <hr/>
+
+    <h2> Other </h2>
+
+    <ul><li>I previously interned as a quantitative trader at <a target="_blank" rel="noopener noreferrer" href="https://optiver.com/">Optiver</a>, an options market making firm in Chicago.</li> 
+    <li>In my free time, I enjoy hiking with friends, playing soccer and table tennis, crafting wordplay, and composing minimalist piano music. </li>
+    </ul>
 </body>
 </article>
 

@@ -4,18 +4,18 @@ html {
     margin-right: 14%;
     margin-bottom: 5%;
     zoom:100%;
-    background-color: #edf0f4;
+    background-color: #ffffff;
 }
 strong {
     font-weight: 600;
 }
 article {
-    font: 400 18px/1.5 "Hind Siliguri",Roboto,Helvetica,Arial,sans-serif;
+    font: 200 16px/1.5 "Hind Siliguri",Roboto,Helvetica,Arial,sans-serif;
     color: #111;
     word-spacing: 0.5px;
 }
 h1 {
-    font-size: 36px;
+    font-size: 32px;
     color: #011F5B;
     margin-bottom: 0.5%;
 }
@@ -36,24 +36,35 @@ body {
     flex-direction: column
 }
 
-a.pub {
+a.arxiv {
     color: #d43515;
     text-decoration: none;
 }
 
-a.pub:hover {
+a.arxiv:hover {
     color: #990000;
+    text-decoration: underline;
+}
+
+a.journal {
+    color:initial;
+    font-style: italic;
+}
+
+a.journal:hover {
+    color:initial;
     text-decoration: underline;
 }
 
 
 a {
-    color: #0c5fac;
+    font-weight: 400;
+    color: #0086a4;
     text-decoration: none;
 }
 
 a:hover {
-    color: #003699;
+    color: #016981;
     text-decoration: underline;
 }
 
@@ -61,7 +72,7 @@ span.email {
     border: solid black 1px;
     font: 400 14px "Reddit Mono", monospace;
     color: hsl(0, 0%, 0%);
-    background-color: #025fff2a;
+    background-color: #02ffea2a;
     padding: 6px;
     border-radius: 6px;
     margin-bottom: 1px;
@@ -76,14 +87,31 @@ span.email:hover {
 }
 
 span.email:active {
-    background-color: #0245ff3c;
+    background-color: #02ffea51;
 }
 
 #copyText {
     display: none;
-    color:rgb(13, 26, 86)
 }
 
 #id2 {
     display: none;
+}
+
+img {
+    border-radius: 20%;
+    display: flex;
+    margin: 1.5%;
+    border: solid rgb(46, 46, 46) 1px;
+}
+
+hr.thick {
+    height: 0px;
+    border: none;
+    border-top: 1.5px solid black;
+}
+hr {
+    height: 0px;
+    border: none;
+    border-top: 1px solid black;
 }
