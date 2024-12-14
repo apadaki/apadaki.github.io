@@ -8,8 +8,8 @@ export default {
 		},
 		extend: {},
 		fontSize: {
-			sm: ['0.87rem', '18pt'],
-			base: ['0.97rem', '18pt'],
+			sm: ['0.9rem', '19pt'],
+			base: ['0.97rem', '19pt'],
 			xl: ['1.333rem', '24pt'],
 			'2xl': ['1.667rem', '24pt'],
 			'3xl': '2rem'
