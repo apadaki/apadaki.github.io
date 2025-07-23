@@ -1,19 +1,38 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: 'class',
 	theme: {
 		fontFamily: {
-			'main': ['Noto Sans','Roboto','Helvetica','Arial','sans-serif'],
+			'main': ['Geneva', 'AppleGothic', 'sans-serif'],
+			'extrabold': ['sans-serif'],
 			'title': ['Noto Sans','Roboto','Helvetica','Arial','sans-serif'],
+			'mono': ['JetBrains Mono', 'monospace'],
+			// 'blog': ['Sora', 'system-ui', 'sans-serif'],
 		},
-		extend: {},
-		fontSize: {
-			sm: ['0.9rem', '19pt'],
-			base: ['0.97rem', '19pt'],
-			xl: ['1.333rem', '24pt'],
-			'2xl': ['1.667rem', '24pt'],
-			'3xl': '2rem'
-		}
+		extend: {
+			colors: {
+				primary: {
+					50: '#f0f9ff',
+					100: '#e0f2fe',
+					200: '#bae6fd',
+					300: '#7dd3fc',
+					400: '#38bdf8',
+					500: '#0ea5e9',
+					600: '#0284c7',
+					700: '#0369a1',
+					800: '#075985',
+					900: '#0c4a6e',
+				},
+				dark: {
+					100: '#1E293B',
+					200: '#0F172A',
+					300: '#020617',
+				}
+			},
+		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+	],
 }
