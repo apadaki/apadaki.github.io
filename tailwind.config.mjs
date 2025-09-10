@@ -4,11 +4,9 @@ export default {
 	darkMode: 'class',
 	theme: {
 		fontFamily: {
-			'main': ['Geneva', 'AppleGothic', 'sans-serif'],
-			'extrabold': ['sans-serif'],
-			'title': ['Noto Sans','Roboto','Helvetica','Arial','sans-serif'],
+			'main': ['Geneva', 'Open Sans', 'sans-serif'],
+			'title': ['Geneva','Open Sans', 'sans-serif'],
 			'mono': ['JetBrains Mono', 'monospace'],
-			// 'blog': ['Sora', 'system-ui', 'sans-serif'],
 		},
 		extend: {
 			colors: {
