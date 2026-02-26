@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+if (!post) throw new Error("Post not found");
+const { Content } = await post.render();
+---
+<html lang="en" class="font-main">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{post.data.title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <!-- KaTeX for math/LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  </head>
+
+
+  <body>
+    <div class="ml-[8%] mr-[8%] lg:ml-[16%] lg:mr-[16%] 2xl:ml-[30%] 2xl:mr-[30%] mt-6 mb-10 font-main text-sm md:text-base lg:text-base">
+      <header class="mb-4 lg:mb-0 text-right">
+            <a class="no-underline transition-colors duration-200 hover:brightness-125 text-indigo-400" href="/">home</a> &nbsp; <a class="no-underline transition-colors duration-200 hover:brightness-125 text-indigo-400" href="/blog">blog</a> &nbsp; <a class="no-underline transition-colors duration-200 hover:brightness-125 text-indigo-400" target="_blank" rel="noopener noreferrer" href="/files/Ashwin_Padaki_CV.pdf">cv</a>
+        </header>
+
+      <div class="pb-4 border-b border-gray-200">
+        <h1 class="mt-8 text-2xl lg:text-3xl font-bold text-left mb-2">{post.data.title}</h1>
+        <div class="text-gray-500 text-sm mb-1">{post.data.date}</div>
+      </div>
+
+      <article class="mt-6 prose max-w-none" style="color:#000;">
+        <style>
+          .prose, .prose * { color: #000 !important; }
+          .prose h1 { font-size: 1.6em !important; }
+          .prose h2 { font-size: 1.3em !important; }
+          .prose h3 { font-size: 1.1em !important; }
+          .prose h4, .prose h5, .prose h6 { font-size: 1em !important; }
+        </style>
+        <Content />
+      </article>
+    </div>
+  </body>
+</html>

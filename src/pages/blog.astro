@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+const posts = await getCollection("blog");
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Ashwin Padaki</title>
+    <!-- KaTeX for math/LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" crossorigin="anonymous" />
+  </head>
+  <body class="bg-slate-50 text-slate-900 font-main">
+    <div class="ml-[8%] mr-[8%] lg:ml-[16%] lg:mr-[16%] 2xl:ml-[30%] 2xl:mr-[30%] mt-6 mb-10 text-sm md:text-base lg:text-base">
+      <!-- Header -->
+      <header class="mb-4 lg:mb-0 text-right">
+        <a class="no-underline transition-colors duration-200 hover:text-indigo-400 hover:brightness-125 text-indigo-400" href="/">home</a> &nbsp;
+        <a class="no-underline transition-colors duration-200 hover:text-indigo-400 hover:brightness-125 text-indigo-400" href="/blog">blog</a> &nbsp;
+        <a class="no-underline transition-colors duration-200 hover:text-indigo-400 hover:brightness-125 text-indigo-400" target="_blank" rel="noopener noreferrer" href="/files/Ashwin_Padaki_CV.pdf">cv</a>
+      </header>
+
+      <!-- Title -->
+      <h1 class="mt-4 text-3xl lg:text-4xl text-center text-rose-500">Vectors and Vertices</h1>
+      <center class="mt-4 select-text text-slate-700 text-xl">
+        <span>a research blog on geometric/graph algorithms</span>
+      </center>
+
+      <!-- Blog Previews -->
+      <div class="mt-8 grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+        {posts.map((post) => (
+          <a href={`/blog/${post.slug}/`} class="block rounded-lg border border-slate-300 bg-white shadow hover:shadow-xl transition-all duration-200 p-6 group">
+            <div class="flex items-center justify-between mb-2">
+              <h2 class="text-xl font-semibold group-hover:text-rose-500 transition-colors">{post.data.title}</h2>
+              <span class="text-xs text-slate-500">{post.data.date}</span>
+            </div>
+            <p class="text-slate-700 mb-3">{post.data.excerpt}</p>
+            <span class="text-rose-500 text-xs font-semibold group-hover:brightness-125">Read more &rarr;</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center text-slate-500 text-xs">
+        Powered by Astro &middot; Math rendered with KaTeX
+      </div>
+    </div>
+  </body>
+</html>
