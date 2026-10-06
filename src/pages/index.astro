@@ -39,7 +39,7 @@ const publications: Publication[] = [
         website: 'https://vq-bench.com/',
         code: 'https://github.com/pinecone-io/vq-bench',
         summary:
-            "We propose a compositional framework for vector quantization that expresses quantizers as chains of shared algorithmic primitives. Our framework clarifies the relationships between existing methods, enables faithful comparisons, and makes it easier to design new quantizers. We implement the framework and an evaluation harness in an <a href='https://github.com/pinecone-io/vq-bench' target='_blank' rel='noopener noreferrer'>open-source library</a>, and we publish a benchmark at <a href='https://vq-bench.com/' target='_blank' rel='noopener noreferrer'>vq-bench.com</a>.",
+            "Vector quantization is increasingly important for vector databases and LLMs, but state-of-the-art approaches are hard to compare. We propose a framework that expresses quantizers as compositions of shared primitives, making it easy to compare existing approaches and design new ones. We provide an <a href='https://github.com/pinecone-io/vq-bench' target='_blank' rel='noopener noreferrer'>open-source library</a> for building and evaluating quantizers, along with a public benchmark at <a href='https://vq-bench.com/' target='_blank' rel='noopener noreferrer'>vq-bench.com</a>.",
         selected: true,
     },
     {
@@ -50,7 +50,7 @@ const publications: Publication[] = [
         venueUrl: 'https://vecdb-ws.github.io/vldb2026/',
         slides: '/files/learnpartitions_slides_2026.pdf',
         summary:
-            "We study nearest neighbor search from a data-driven perspective. We imagine an algorithm designer who is given a dataset and samples of past queries, with the goal of building an optimal data structure (within a class) for future queries. We focus on the class of balanced halfspace partition trees and show that, for Gaussian-like distributions, one can efficiently learn a data structure achieving sublinear query time.",
+            "Can a nearest neighbor search index learn from past queries to answer future ones more efficiently? We give a positive answer: whenever queries follow a Gaussian-like distribution and the dataset admits a perfect halfspace partition tree, one can efficiently learn a data structure with sublinear query time.",
         selected: true,
     },
     {
@@ -61,7 +61,7 @@ const publications: Publication[] = [
         venueUrl: 'https://epubs.siam.org/doi/10.1137/1.9781611978971.58',
         slides: '/files/navigability_slides_2025.pdf',
         summary:
-            "We study the problem of building the  sparsest navigable graph on a dataset, an abstraction of graph-based nearest neighbor methods such as DiskANN and HNSW. We formulate navigability as a set cover problem, obtaining a cubic-time approximation algorithm and matching hardness. We then introduce a relaxation that can be solved via fast matrix multiplication.",
+        "Graph-based nearest neighbor search requires graphs that are simultaneously sparse and easy to navigate, but just how sparse can they be? We formulate constructing the sparsest navigable graph as a set covering problem, obtaining an O(<em>n</em><sup>3</sup>)-time approximation algorithm and matching hardness. We then introduce a relaxation of the problem which we solve via fast matrix multiplication.",
         selected: true,
     },
     {
