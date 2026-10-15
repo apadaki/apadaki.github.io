@@ -20,7 +20,7 @@ const publications: Publication[] = [
         authors: 'Alexandr Andoni, Krish Singal, Styopa Zharkov',
         status: 'Under review',
         summary:
-            "Computing attention is a major bottleneck to scaling LLM context windows. Sparse attention methods identify the most important tokens via maximum inner product search (MIPS). What is the best way to use a black-box MIPS oracle to approximate attention? We give tight bounds on the tradeoff between the number of MIPS indices used and keys retrieved, unifying prior approaches through priority sampling. Our analysis yields a simple algorithm that retrieves only O(1/ε<sup>2</sup>) keys for error ε and empirically outperforms prior approaches.",
+            "Attention computation is a major bottleneck in scaling LLM context windows. Sparse attention methods approximate attention by identifying important tokens, often via maximum inner product search (MIPS). How well can attention be approximated using a black-box MIPS oracle? We provide strong tradeoffs between the number of MIPS indices and the number of keys retrieved. Our analysis yields a very simple algorithm that retrieves only O(1/ε<sup>2</sup>) keys to achieve error ε and performs well on LLM inference tasks.",
         selected: true,
     },
     {
