@@ -3,6 +3,7 @@ type Publication = {
     title: string;
     url?: string;
     authors: string;
+    status?: string;
     venue?: string;
     venueUrl?: string;
     slides?: string;
@@ -17,6 +18,9 @@ const publications: Publication[] = [
         title: 'Attention via Black-Box Vector Search',
         url: 'https://arxiv.org/abs/2610.10135',
         authors: 'Alexandr Andoni, Krish Singal, Styopa Zharkov',
+        status: 'Under review',
+        summary:
+            "Computing attention is a major bottleneck to scaling LLM context windows. Sparse attention methods identify the most important tokens via maximum inner product search (MIPS). What is the best way to use a black-box MIPS oracle to approximate attention? We give tight bounds on the tradeoff between the number of MIPS indices used and keys retrieved, unifying prior approaches through priority sampling. Our analysis yields a simple algorithm that retrieves only O(1/ε<sup>2</sup>) keys for error ε and empirically outperforms prior approaches.",
         selected: true,
     },
     {
@@ -180,9 +184,10 @@ const external = { target: '_blank', rel: 'noopener noreferrer' };
                             ? <a class="font-medium text-neutral-900 hover:underline underline-offset-2" {...external} href={pub.url}>{pub.title}</a>
                             : <span class="font-medium text-neutral-900">{pub.title}</span>}
                         <div class="text-[#474747]">with {pub.authors}</div>
-                        {(pub.venue || pub.slides || pub.website || pub.code || pub.summary) && (
+                        {(pub.status || pub.venue || pub.slides || pub.website || pub.code || pub.summary) && (
                             <div class="text-[15px] text-neutral-500">
                                 {[
+                                    pub.status && <span class="text-neutral-800">{pub.status}</span>,
                                     pub.venue && (pub.venueUrl
                                         ? <a class="venue meta-link" {...external} href={pub.venueUrl}>{pub.venue}</a>
                                         : <span class="venue">{pub.venue}</span>),
